@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="Open Weather"
+        android:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ll"
+        android:layout_marginBottom="50dp"
+        />
+    <TextView
+
+        android:id="@+id/sub_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="Know your country's weather"
+        android:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:layout_marginBottom="50dp"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp">
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="204dp"
+            android:backgroundTint="@color/white"
+            android:layout_height="51dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white" />
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_icon"
+            android:background="@color/white"
+            app:searchHintIcon="@color/black"
+            app:searchIcon="@drawable/ic__search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:id="@+id/showing_text"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll"
+        android:layout_marginTop="60dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
